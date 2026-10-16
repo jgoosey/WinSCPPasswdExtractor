@@ -96,7 +96,7 @@ def decryptRegistry():
 
 
 def decryptIni(filepath):
-    config = configparser.ConfigParser(strict=False)
+    config = configparser.ConfigParser(strict=False, interpolation=None)
     config.read(filepath)
 
     # Stop extracting creds if Master Password is set
